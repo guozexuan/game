@@ -1,0 +1,74 @@
+@import "common/public";
+@import "common/css3function";
+@import "common/reset";
+img{
+  width: 100%;
+}
+.top,.center,.bottom,.run{
+  position: relative;
+  z-index: 3;
+  width: 50%;
+  margin: 2rem auto;
+}
+#run{
+  width: 25%;
+  position: absolute;
+  left: 50%;
+  bottom: -7%;
+  margin-left: -12.5%;
+  z-index: 1;
+
+  animation:run 2s infinite linear;
+}
+@keyframes run {
+  0%{bottom: -7%;}
+  80%{bottom: 88%;}
+  100%{bottom: 70%;}
+}
+
+
+#scale{
+  animation:scale 2s infinite linear;
+  //-moz-animation:scale 1.25s infinite linear;
+  //-webkit-animation:scale 1.25s infinite linear;
+}
+@keyframes scale {
+    0%{transform:scale(0.5)}
+    100%{transform:scale(1.2)}
+}
+@-webkit-keyframes scale {
+  0%{transform:scale(0.5)}
+  100%{transform:scale(1.2)}
+}
+@-moz-keyframes scale {
+  0%{transform:scale(0.5)}
+  100%{transform:scale(1.2)}
+}
+
+#opacity{
+  opacity: 1;
+  animation:opacity 3s infinite linear;
+}
+@keyframes opacity{
+  0%{opacity:1}
+  100%{opacity: 0.2}
+}
+
+#rotate{
+  animation:rotate 5s infinite linear;
+  -moz-animation:rotate 5s infinite linear;
+  -webkit-animation:rotate 5s infinite linear;
+}
+@keyframes rotate{
+  0%{transform:rotate(360deg);}
+  100%{transform:rotate(0deg);}
+}
+@-webkit-keyframes rotate{
+  0%{transform:rotate(360deg);}
+  100%{transform:rotate(0deg);}
+}
+@-moz-keyframes rotate{
+  0%{transform:rotate(360deg);}
+  100%{transform:rotate(0deg);}
+}
+
